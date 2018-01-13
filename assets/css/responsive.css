@@ -1,0 +1,77 @@
+@media screen and (max-width : 980px){
+    /* body{
+        background-color: dodgerblue;
+    } */
+    .wrapper{
+        width : 840px;
+    }
+}
+
+@media screen and (max-width : 850px){
+    .wrapper{
+        width: 750px;
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    /* body{
+        background-color: crimson;
+    } */
+    .wrapper{
+        width : 635px;
+    }
+    .left-container{
+        float : none;
+    }
+    .left-menu{
+        width : auto;
+    }
+}
+
+@media screen and (max-width : 648px){
+    /* body{
+        background-color: yellowgreen;
+    } */
+    .container{
+        margin : 5px;
+        padding : 5px;
+    }
+    #main-container{
+        padding : 9px;
+    }
+    .wrapper{
+        width: auto;    
+    }
+    #navbar-first-title{
+        display: block;
+    }
+    #navbar-first-right-container{
+        float : none;
+    }
+}
+
+@media screen and (max-width : 500px){
+    /* body{
+        background-color: chocolate;
+    } */
+    .navbar-second-item-a{
+        display: block;
+    }
+    #search-input{
+        width : 90%;
+    }
+    .form-row{
+        margin : 15px auto 15px auto;
+    }
+    .form-label,.form-input-left{
+        float : none;
+        display: block;
+        width : 100%;
+    }
+}
+
+@media screen and (max-width : 450px){
+    .form-button{
+        width : 100%;
+    }
+}

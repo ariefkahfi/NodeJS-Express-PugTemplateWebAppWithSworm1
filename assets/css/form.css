@@ -1,0 +1,38 @@
+.form-wrapper{
+
+}
+
+.form-row{
+    margin : 5px;
+}
+.form-label{
+    float : left;
+    width : 115px;
+    margin-top : 5px;
+}
+
+.form-input-left{
+    float : left;
+}
+
+
+.form-button{
+    border : 1px solid #dfdfdf;
+    color : white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding : 8px;
+}
+.form-button-primary{
+    background-color: #72BA54;
+    
+}
+.form-button-secondary{
+    background-color: #F44336;
+}
+
+.form-input{
+    border : 1px solid #dfdfdf;
+    border-radius: 5px;
+    padding : 5px; 
+}

@@ -1,0 +1,31 @@
+extends index
+
+append header
+    link(rel="stylesheet", href="/css/member.css")
+
+block form-component
+    div(class="form-wrapper")
+        div(class="form-row clearfix")    
+            label(for="id",class="form-label") Member ID
+            input(id = "id",type="text",class="form-input form-input-left")
+        div(class="form-row clearfix")
+            label(for="name",class="form-label") Member Name
+            input(id= "name",type="text",class="form-input form-input-left")
+        div(class="form-row clearfix")
+            label(for="address",class="form-label") Member Address
+            input(id= "address",type="text",class="form-input form-input-left")
+        div(class="form-row")                        
+            button(class="form-button form-button-primary") Submit Data
+            
+block list-component
+    span Ini List Member
+
+    
+    
+block container-bordered
+    a(id = "form-component-a",class="a-no-underline container-line-a") Form Member
+    a(id = "list-component-a",class="a-no-underline container-line-a") Member List
+
+
+append footer
+    script(src="/js/member.js")

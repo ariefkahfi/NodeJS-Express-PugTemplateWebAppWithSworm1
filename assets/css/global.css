@@ -1,0 +1,149 @@
+body{
+    margin : 0;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.green-bg{
+    background-color: #72BA54;
+}
+
+/* title styles */
+.title-no-margin{
+    margin : 0;
+}
+/* title styles */
+
+
+/* font white */
+.font-white{
+    color : white;
+}
+/* font white */
+
+/* wrapper */
+.wrapper{
+    width : 960px;
+    margin : auto;
+}
+/* wrapper */
+
+
+
+
+/* containers */
+#main-container{
+    padding : 5px;
+}
+.container{
+    
+}
+.container-bordered{
+    border-radius: 4px;
+    margin-top : 5px;
+    border : 1px solid #dfdfdf;
+}
+.container-bordered-title{
+    margin : 0;
+    padding : 5px;
+    color : white;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: #72BA54;
+}
+.container-bordered-content{
+    padding : 5px;
+}
+.left-container{
+    float : left;
+    padding : 5px;   
+}
+.right-container{
+    overflow: hidden;
+    padding : 5px;
+}
+/* .right-container-content{
+    padding : 5px;
+} */
+.container-line{
+    border-radius:  4px;
+    margin-top : 5px;
+    border : 1px solid #dfdfdf;
+}
+.container-line-a{
+    border-bottom : 1px solid #dfdfdf;
+    color : grey;
+    cursor: pointer;
+    padding : 5px;
+    display: block;
+}
+.container-line-a:hover{
+    background-color: #72BA54;
+    color : white;
+}
+/* containers */
+
+
+/* menus */
+.left-menu{
+    border-radius: 4px;
+    width : 240px;
+    border : 1px solid #dfdfdf;
+}
+.left-menu-a{
+    display: block;
+    color : grey;
+    border-bottom : 1px solid #dfdfdf;
+    padding : 15px;
+}
+.left-menu-a:hover{
+    color : white;
+    background-color: #72BA54;
+}
+/* menus */
+
+/* navbar first */
+#navbar-first-wrapper{
+    
+}
+#navbar-first-title{
+    display: inline-block;
+    text-transform: uppercase;
+    padding : 3px;
+}
+#navbar-first{
+    color : white;
+    padding : 5px;
+}
+#navbar-first-right-container{
+    float : right;
+}
+/* navbar first */
+
+
+/* navbar second */
+#navbar-second-wrapper{
+    box-shadow: 8px 8px 14px rgba(0, 0, 0, 0,6);
+    border-bottom : 1px solid #dfdfdf;
+}
+#navbar-second{
+    text-align: center;
+    padding : 8px;
+}
+.a-no-underline{
+    text-decoration: none;
+}
+.navbar-second-item-a{
+    color: grey;
+    margin : 29px;
+}
+/* navbar second */
+
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}

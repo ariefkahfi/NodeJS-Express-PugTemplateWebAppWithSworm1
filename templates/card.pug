@@ -1,0 +1,34 @@
+extends index
+
+append header
+    link(rel="stylesheet", href="/css/card.css")
+
+block form-component
+    div(class="form-wrapper")
+        div(class="form-row clearfix")
+            label(class="form-label",for="id") Card ID
+            input(id = "id",type="number",class="form-input form-input-left")
+        div(class="form-row clearfix")
+            label(for="type",class="form-label") Card Type
+            select(id="type",class="form-input-left")
+                option(value="VIP") VIP
+                option(value="Non-VIP") Non-VIP
+        div(class="form-row clearfix")
+            label(for="member_id",class="form-label") Member ID
+            select(id="member_id",class="form-input-left")
+        div(class="form-row")
+            button(class="form-button form-button-primary") Submit data                                            
+
+block list-component
+    span Ini List Card
+
+
+
+block container-bordered
+    a(id="form-component-a",class="a-no-underline container-line-a") Form Card
+    a(id="list-component-a",class="a-no-underline container-line-a") Card List
+
+append footer
+    script(src="/js/card.js")
+
+

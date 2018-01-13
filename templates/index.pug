@@ -1,0 +1,58 @@
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/css/index.css")
+        link(rel="stylesheet", href="/css/form.css")
+
+        block header
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/css/global.css")
+        link(rel="stylesheet", href="/css/responsive.css")
+
+    body
+        block navbar-first
+            div(class="green-bg",id="navbar-first-wrapper")
+                nav(id="navbar-first",class="clearfix wrapper") 
+                    h4(class="title-no-margin",id="navbar-first-title") PugWebApp
+                    div(id="navbar-first-right-container")
+                        input(type="text",class="form-input",id="search-input")
+                        span 
+                            i(class="fa fa-search fa-fw")
+
+        block navbar-second
+            div(id="navbar-second-wrapper")
+                nav(id="navbar-second",class="wrapper")
+                    div(id="navbar-second-item-container")
+                        a(href="/",class="a-no-underline navbar-second-item-a") Home
+                        a(href="/book",class="a-no-underline navbar-second-item-a") Book
+                        a(href="/member",class="a-no-underline navbar-second-item-a") Member
+                        a(href="/card",class="a-no-underline navbar-second-item-a") Card
+        block content
+            div(class="container wrapper clearfix")
+                div(class="left-container")
+                    div(class="left-menu")
+                        a(href="#",class="left-menu-a a-no-underline") Menu one
+                        a(href="#",class="left-menu-a a-no-underline") Menu two
+                        a(href="#",class="left-menu-a a-no-underline") Menu three
+                        a(href="#",class="left-menu-a a-no-underline") Menu four
+                div(class="right-container")                    
+                    div(class="container-bordered")
+                        h2 #{title}
+                    div(class="container-line")
+                        block container-bordered                        
+        block main-content
+            div(class="wrapper",id="main-container")
+                div(class="container-bordered",id="form-component")
+                    h3(class="container-bordered-title") #{titleForm}
+                    div(class="container-bordered-content")
+                        block form-component
+                div(class="container-bordered",id="list-component")
+                    h3(class="container-bordered-title") #{titleList}
+                    div(class="container-bordered-content")
+                        block list-component
+
+        
+
+    block footer
+        script(src="/js/component.js")

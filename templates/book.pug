@@ -1,0 +1,30 @@
+extends index
+
+
+append header
+    link(rel="stylesheet", href="/css/book.css")
+
+block form-component
+    div(class="form-wrapper")
+        div(class="form-row clearfix")
+            label(class="form-label",for="name") Name
+            input(type="text",id="name",class="form-input form-input-left")
+        div(class="form-row clearfix")
+            label(class="form-label",for="price") Price
+            input(type="number",id="price",class="form-input form-input-left")                    
+        div(class="form-row")
+            button(class="form-button form-button-primary") Submit Data    
+
+block list-component
+    span Ini List Book
+
+
+block container-bordered
+    a(class="a-no-underline container-line-a",id="form-component-a") Form Book
+    a(class="a-no-underline container-line-a",id="list-component-a") List Book
+
+
+append footer
+    script(src="/js/book.js")
+
+        
