@@ -4,10 +4,7 @@ var app = express();
 var bodyParser = require("body-parser");
 
 
-var bookCRUD = require("./models/book/bookCRUD");
-var cardCRUD = require("./models/card/cardCRUD");
-var memberCRUD = require("./models/member/memberCRUD");
-var memberBookCRUD = require("./models/member-book/memberBookCRUD");
+
 
 
 app.use(bodyParser.urlencoded({extended : true}));
