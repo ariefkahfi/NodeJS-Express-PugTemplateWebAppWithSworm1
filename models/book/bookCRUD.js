@@ -12,7 +12,17 @@ function BookCRUD(){
             obj.onError(err);
         });
     }
-
+    this.getBooks = function(obj){
+        databaseModel
+            .bookModel()
+            .query("select * from book")
+            .then(function(results){
+                obj.onResult(results);
+            })
+            .catch(function(err){
+                obj.onError(err);
+            });
+    }
     this.update = function(obj){
         databaseModel.bookModel({
             name : obj.book.name,
