@@ -1,9 +1,10 @@
 var databaseModel = require("../databasemodel");
 
+var bookModel = databaseModel.bookModel();
 
 function BookCRUD(){
     this.save = function(obj){
-        databaseModel.bookModel({
+        bookModel({
             name : obj.book.name,
             price : obj.book.price
         }).save().then(function(){
@@ -24,7 +25,7 @@ function BookCRUD(){
             });
     }
     this.update = function(obj){
-        databaseModel.bookModel({
+        bookModel({
             name : obj.book.name,
             price : obj.book.price,
             id : obj.book.id

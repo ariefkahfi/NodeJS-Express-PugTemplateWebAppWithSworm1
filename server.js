@@ -25,7 +25,8 @@ app.post("/book/add",function(req,res){
         book : {
             name : req.body.name,
             price : req.body.price
-        },
+        }
+        ,
         onFinish : function(){
             res.json({
                 status : 200,

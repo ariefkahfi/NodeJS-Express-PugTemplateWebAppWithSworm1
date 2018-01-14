@@ -1,8 +1,10 @@
 var databaseModel = require("../databasemodel");
 
+var memberBookModel = databaseModel.memberBookModel();
+
 function MemberBookCRUD(){
     this.deleteRelation = function(obj){
-        databaseModel.memberBookModel()
+        memberBookModel()
             .statement("delete from member_book where " + 
                 "member_id = @m_id " 
              +  "and book_id = @b_id ",{
@@ -14,7 +16,7 @@ function MemberBookCRUD(){
                 obj.onError(err);
              });
     }
-    
+
 }
 
 module.exports = new MemberBookCRUD();

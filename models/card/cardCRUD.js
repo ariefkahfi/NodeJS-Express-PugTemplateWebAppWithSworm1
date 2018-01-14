@@ -1,9 +1,10 @@
 var databaseModel = require("../databasemodel");
 
+var cardModel = databaseModel.cardModel();
 
 function CardCRUD(){
     this.save = function(obj){
-        databaseModel.cardModel({
+        cardModel({
             id : obj.card.id,
             type : obj.card.type,
             member_id : obj.card.member_id
@@ -26,7 +27,7 @@ function CardCRUD(){
             });
     }
     this.update = function(obj){
-        databaseModel.cardModel({
+        cardModel({
             type : obj.card.type,
             id : obj.card.id
         }).update().then(function(){

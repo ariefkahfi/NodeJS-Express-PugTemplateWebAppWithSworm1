@@ -1,8 +1,10 @@
 var databaseModel = require('../databasemodel');
 
+var memberModel = databaseModel.memberModel();
+
 function MemberCRUD(){
     this.save = function(obj){
-        databaseModel.memberModel({
+        memberModel({
             id : obj.member.id,
             name : obj.member.name,
             address : obj.member.address
@@ -27,7 +29,7 @@ function MemberCRUD(){
     }
 
     this.update = function(obj){
-        databaseModel.memberModel({
+        memberModel({
             name : obj.member.name,
             address : obj.member.address,
             id : obj.member.id
