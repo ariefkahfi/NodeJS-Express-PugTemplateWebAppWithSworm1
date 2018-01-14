@@ -23,7 +23,7 @@ function DatabaseModel(){
     this.memberModel = function(){
         return this.dbInstance().model({table : "member"});
     }
-    this.memberBook = function(){
+    this.memberBookModel = function(){
         return this.dbInstance()
                    .model(
                     {
