@@ -18,12 +18,12 @@ function MemberCRUD(){
     }
 
     this.getMembers = function(obj){
-        databaseModel.memberModel()
+        memberModel
             .query("select * from member")
-            .then(function(results){
-                obj.onResult(results);
+            .then((data)=>{
+                obj.onResult(data);
             })
-            .catch(function(err){
+            .catch((err)=>{
                 obj.onError(err);
             });
     }
@@ -45,4 +45,4 @@ function MemberCRUD(){
 
 }
 
-module.export = new MemberCRUD();
+module.exports = new MemberCRUD();

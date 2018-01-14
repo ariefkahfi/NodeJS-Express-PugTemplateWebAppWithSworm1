@@ -5,7 +5,7 @@ var cardModel = databaseModel.cardModel();
 function CardCRUD(){
     this.save = function(obj){
         cardModel({
-            id : obj.card.id,
+            card_id : obj.card.id,
             type : obj.card.type,
             member_id : obj.card.member_id
         }).save()
@@ -15,9 +15,21 @@ function CardCRUD(){
             obj.onError(err);
         });
     }
-    this.getCards = function(obj){
+    this.getCardsAndMembers = (obj)=>{
         databaseModel
-            .cardModel()
+            .dbInstance()
+            .query("select * from card c " +
+            " inner join member m " + 
+            " on c.member_id = m.id ")
+            .then((data)=>{
+                obj.onResult(data);
+            })
+            .catch((err)=>{
+                obj.onError(err);
+            });
+    }
+    this.getCards = function(obj){
+        cardModel
             .query("select * from card")
             .then(function(results){
                 obj.onResult(results);

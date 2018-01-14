@@ -31,7 +31,11 @@ body{
 }
 /* wrapper */
 
-
+/* tables */
+.table{
+    width : 100%;
+}
+/* tables */
 
 
 /* containers */

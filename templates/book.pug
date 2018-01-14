@@ -16,7 +16,11 @@ block form-component
             button(class="form-button form-button-primary",onclick="submitBook()") Submit Data    
 
 block list-component
-    span Ini List Book
+    table(class="table",id="table-book",border="2")
+        tr
+            td Book ID 
+            td Book Name
+            td Book Price
 
 
 block container-bordered

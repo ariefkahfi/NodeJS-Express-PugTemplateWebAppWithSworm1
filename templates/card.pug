@@ -17,10 +17,14 @@ block form-component
             label(for="member_id",class="form-label") Member ID
             select(id="member_id",class="form-input-left")
         div(class="form-row")
-            button(class="form-button form-button-primary") Submit data                                            
+            button(class="form-button form-button-primary",onclick="submitCard()") Submit data                                            
 
 block list-component
-    span Ini List Card
+    table(class="table",id="table-card",border="2")
+        tr
+            td Card ID
+            td Card Type
+            td Card's Owner
 
 
 

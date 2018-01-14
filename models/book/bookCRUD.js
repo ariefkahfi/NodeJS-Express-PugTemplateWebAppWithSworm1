@@ -28,7 +28,7 @@ function BookCRUD(){
         bookModel({
             name : obj.book.name,
             price : obj.book.price,
-            id : obj.book.id
+            book_id : obj.book.id
         }).update().then(function(){
             obj.onFinish();
         }).catch(function(err){

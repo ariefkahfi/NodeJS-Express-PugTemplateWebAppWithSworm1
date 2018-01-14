@@ -19,11 +19,13 @@ app.set("view engine","pug");
 var bookApp = require("./sub-app/bookApp");
 var cardApp = require("./sub-app/cardApp");
 var memberApp =require("./sub-app/memberApp");
+var memberBookApp = require("./sub-app/memberBookApp");
 
 
 app.use("/book",bookApp);
 app.use("/card",cardApp);
 app.use("/member",memberApp);
+app.use("/member-book",memberBookApp);
 
 
 

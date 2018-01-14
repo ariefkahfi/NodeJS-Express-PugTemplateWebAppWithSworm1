@@ -27,16 +27,16 @@ memberApp.post("/add",function(req,res){
 });
 memberApp.get("/gets",function(req,res){
     memberCRUD.getMembers({
-        onResult : function(result){
+        onResult : (results)=>{
             res.json({
                 status : 200,
-                message : result
+                message : results
             });
         },
-        onError : function(err){
+        onError : (err)=>{
             res.json(500,{
                 status : 500,
-                message : err
+                message : err                
             });
         }
     });
@@ -63,4 +63,5 @@ memberApp.post("/update/:id",function(req,res){
     });
 });
 
+module.exports = memberApp;
 

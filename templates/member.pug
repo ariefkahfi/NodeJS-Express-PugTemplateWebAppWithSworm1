@@ -3,6 +3,30 @@ extends index
 append header
     link(rel="stylesheet", href="/css/member.css")
 
+append main-content
+    div(class="wrapper",id="member-book-container")
+        div(class="container-bordered",id="form-component")
+            h3(class="container-bordered-title") Member's Book Form
+            div(class="container-bordered-content")
+                div(class="form-wrapper")
+                    div(class="form-row clearfix")    
+                        label(for="member_id",class="form-label") Member ID
+                        select(id="member_id",class="form-input-left")
+
+                    div(class="form-row clearfix")
+                        label(for="book_id",class="form-label") Book Id
+                        select(id="book_id",class="form-input-left")
+
+                    div(class="form-row")                        
+                        button(class="form-button form-button-primary",onclick="submitMemberBook()") Submit Data
+        div(class="container-bordered")
+            h3(class="container-bordered-title") Members's Book List
+            div(class="container-bordered-content")        
+                table(class="table",id="table-member-book",border="2")
+                    tr
+                        td Member Name
+                        td Member's Book Name
+
 block form-component
     div(class="form-wrapper")
         div(class="form-row clearfix")    
@@ -15,17 +39,21 @@ block form-component
             label(for="address",class="form-label") Member Address
             input(id= "address",type="text",class="form-input form-input-left")
         div(class="form-row")                        
-            button(class="form-button form-button-primary") Submit Data
+            button(class="form-button form-button-primary",onclick="submitMember()") Submit Data
             
 block list-component
-    span Ini List Member
+    table(class="table",id="table-member",border="2")
+        tr
+            td Member ID
+            td Member Name
+            td Member Address
 
     
     
 block container-bordered
     a(id = "form-component-a",class="a-no-underline container-line-a") Form Member
     a(id = "list-component-a",class="a-no-underline container-line-a") Member List
-
+    a(id = "member-book-component-a",class="a-no-underline container-line-a") Members's Book
 
 append footer
     script(src="/js/member.js")

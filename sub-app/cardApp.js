@@ -24,6 +24,22 @@ cardApp.post("/add",function(req,res){
         }
     });
 });
+cardApp.get("/gets/members",(req,res)=>{
+    cardCRUD.getCardsAndMembers({
+        onResult : (data)=>{
+            res.json({
+                status : 200,
+                message : data
+            });
+        },
+        onError : (err)=>{
+            res.json(500,{
+                status : 500,
+                message : err
+            });
+        }
+    });
+});
 cardApp.get("/gets",function(req,res){
     cardCRUD.getCards({
         onResult : function(result){

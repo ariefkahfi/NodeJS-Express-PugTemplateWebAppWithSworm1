@@ -9,7 +9,7 @@ function BaseRequest(config){
     xhr.onreadystatechange = function(){
         if(this.readyState === 4 && this.status === 200){
             config.onSuccess(this.responseText);
-        }else{
+        }else if(this.readyState === 4 && this.status === 500){
             config.onError(this.responseText);
         }
     }
