@@ -27,19 +27,24 @@ function CardCRUD(){
             });
     }
     this.update = function(obj){
-        cardModel({
-            type : obj.card.type,
-            id : obj.card.id
-        }).update().then(function(){
-            obj.onFinish();
-        }).catch(function(err){
-            obj.onError(err);
-        });
+        databaseModel
+            .dbInstance()
+            .statement(
+                "update card set type = @type where member_id = @m_id",
+                {
+                    type : obj.card.type,
+                    member_id : obj.card.member_id
+                }
+            ).then(function(){
+                obj.onFinish();
+            }).catch(function(err){
+                obj.onError(err);
+            });
     }
     this.delete = function(obj){
         databaseModel
             .dbInstance()
-            .statement("delete from card where id = @id",{id : obj.card.id})
+            .statement("delete from card where member_id = @id",{id : obj.card.member_id})
             .then(function(){
                 obj.onFinish();
             })
